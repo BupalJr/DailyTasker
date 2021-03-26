@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DailyBlack"
+    tools:context=".ChooseMainTasks">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_screen_topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+        app:liftOnScroll="true"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="51dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:src="@drawable/ic_baseline_arrow_back" />
+
+            <TextView
+                android:id="@+id/add_task_title"
+                android:layout_width="250dp"
+                android:layout_height="31dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="281dp"
+                android:layout_marginRight="281dp"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.1"
+                android:text="Create a task"
+                android:textColor="@color/DailyYellow"
+                android:textSize="24sp" />
+
+
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingTop="60dp"
+        tools:ignore="MissingConstraints">
+
+
+        <!-- Add New Tasks View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_add_task"
+            android:layout_width="340dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="@color/DailyYellow"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView_one_time_task"
+                    android:layout_width="220dp"
+                    android:layout_height="38dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="104dp"
+                    android:layout_marginRight="104dp"
+                    android:paddingLeft="20dp"
+                    android:text="One-time task"
+                    android:textColor="@color/DailyBlack"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/input_one_time_task"
+                    android:layout_width="288dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/input_style"
+                    android:ems="10"
+                    android:hint="Add tasks here"
+                    android:paddingLeft="20dp"
+                    android:textColor="@color/DailyBlack"
+                    android:inputType="text"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView_one_time_task"
+                    app:layout_constraintHorizontal_bias="0.105"
+                    app:layout_constraintStart_toStartOf="@+id/textView_one_time_task"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_one_time_task"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <Button
+                    android:id="@+id/btn_save_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Save"
+                    android:textColor="@color/DailyYellow"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/input_one_time_task"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/input_one_time_task" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Title  -->
+        <TextView
+            android:id="@+id/textView_choose_task"
+            android:layout_width="250dp"
+            android:layout_height="31dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="281dp"
+            android:layout_marginRight="281dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"
+            android:text="Choose a task"
+            android:textColor="@color/DailyYellow"
+            android:textSize="24sp" />
+
+
+        <!--    Morning Routine View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_morning_routine"
+            android:layout_width="340dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#C2185B"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_morning_routine"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:cropToPadding="true"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/mtask"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/study_task"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textView_morning_routine"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Morning Routine"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!--    All Day Tasks View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_all_day_tasks"
+            android:layout_width="340dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#388E3C"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_all_day_tasks"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:cropToPadding="true"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/atask"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/study_task"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textView_all_day_tasks"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="All Day Tasks"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    Evening Routine View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_evening_routine"
+            android:layout_width="340dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#1976D2"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_evening_routine"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:cropToPadding="true"
+                    android:scaleType="fitEnd"
+                    android:src="@drawable/etask"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textView_evening_routine"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Evening Routine"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

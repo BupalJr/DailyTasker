@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DailyTasker1" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/DailyBlack</item>
+        <item name="colorPrimaryVariant">@color/DailyBlack</item>
+        <item name="colorOnPrimary">@color/DailyBlack</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/DailyYellow</item>
+        <item name="colorSecondaryVariant">@color/DailyYellow</item>
+        <item name="colorOnSecondary">@color/DailyBlack</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

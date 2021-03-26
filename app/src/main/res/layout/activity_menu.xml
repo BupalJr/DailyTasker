@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DailyBlack"
+    tools:context=".MenuActivity">
+
+    <!--    Daily Tasker Logo -->
+    <ImageView
+        android:id="@+id/page_logo"
+        android:layout_width="145dp"
+        android:layout_height="114dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginLeft="144dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginRight="167dp"
+        android:src="@drawable/logo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page_logo">
+        <!--    MAIN BREAKS -->
+        <!--    Break -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/DailyYellow" />
+
+        <!--        Home -->
+        <LinearLayout
+            android:id="@+id/click_home"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:outlineAmbientShadowColor="@color/DailyWhite">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_home" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="2"
+                android:text="Home"
+                android:textColor="@color/DailyYellow"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+        <!--    Break -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/DailyYellow" />
+
+
+        <!--     Done Tasks-->
+        <LinearLayout
+            android:id="@+id/click_done_tasks"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_done" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="2"
+                android:text="Completed Tasks"
+                android:textColor="@color/DailyYellow"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!--    Break -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/DailyYellow" />
+
+        <!--       Notifications -->
+        <LinearLayout
+            android:id="@+id/click_notifications"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_notifications" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="2"
+                android:text="Notifications"
+                android:textColor="@color/DailyYellow"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <!--    MAIN BREAKS -->
+        <!--    Break -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/DailyYellow" />
+
+
+        <!--        Help -->
+        <LinearLayout
+            android:id="@+id/click_help"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_help" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="2"
+                android:text="Help"
+                android:textColor="@color/DailyYellow"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!--    Break -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/DailyYellow" />
+
+
+        <!--        Tell A friend-->
+        <LinearLayout
+            android:id="@+id/click_share"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_share" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="2"
+                android:text="Tell a friend"
+                android:textColor="@color/DailyYellow"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!--    Break -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/DailyYellow" />
+
+
+        <!--       Get in touch -->
+        <LinearLayout
+            android:id="@+id/click_feedback"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_feedback" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="2"
+                android:text="Get in touch"
+                android:textColor="@color/DailyYellow"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!--    Break -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/DailyYellow" />
+
+
+        <!-- Privacy -->
+        <LinearLayout
+            android:id="@+id/click_privacy"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_privacy" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="2"
+                android:text="Privacy"
+                android:textColor="@color/DailyYellow"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <!--    Break -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/DailyYellow" />
+
+
+        <!--        App Version -->
+        <LinearLayout
+            android:id="@+id/click_app_version"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_app_version" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="2"
+                android:text="App version:"
+                android:textColor="@color/DailyYellow"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textView_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dp"
+                android:layout_weight="2"
+                android:text="1.00.001"
+                android:textColor="@color/DailyYellow"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <!--    MAIN BREAKS -->
+        <!--    Break -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/DailyYellow" />
+        <!--        RATE APP-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_rate_app"
+            android:layout_width="370dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="@color/DailyYellow"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="0dp">
+
+            <TextView
+                android:id="@+id/textView_rate_app"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="100dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="7dp"
+                android:text="rate app"
+                android:textAllCaps="true"
+                android:textColor="@color/DailyBlack"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

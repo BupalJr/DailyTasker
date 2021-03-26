@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DailyBlack"
+    tools:context=".DoneTasksActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_screen_topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+        app:liftOnScroll="true"
+        tools:ignore="MissingConstraints">
+
+        <!--    Daily Tasker Logo -->
+        <ImageView
+            android:id="@+id/page_logo"
+            android:layout_width="145dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="144dp"
+            android:layout_marginLeft="144dp"
+            android:layout_marginEnd="167dp"
+            android:layout_marginRight="167dp"
+            android:src="@drawable/logo2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/add_task_title"
+            android:layout_width="500dp"
+            android:layout_height="31dp"
+            android:text="Completed Tasks"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/DailyYellow"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="403dp"
+        android:layout_height="535dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_screen_topAppBar"
+        app:layout_constraintVertical_bias="0.129" />
+
+    <ImageView
+        android:id="@+id/click_home"
+        android:layout_width="83dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_view" />
+
+    <ImageView
+        android:id="@+id/click_menu"
+        android:layout_width="59dp"
+        android:layout_height="36dp"
+        android:src="@drawable/ic_baseline_menu"
+        app:layout_constraintBottom_toBottomOf="@+id/click_home"
+        app:layout_constraintEnd_toStartOf="@+id/add_task"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/click_home"
+        app:layout_constraintTop_toTopOf="@+id/click_home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
