@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bb2"
+    tools:context=".fragments.add.EveningRoutineFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        tools:ignore="MissingConstraints">
+
+        <!--    Plan the next day View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_plan"
+            android:layout_width="342dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#D32F2F"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_plan"
+                    android:layout_width="137dp"
+                    android:layout_height="78dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_plan"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/study_task"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/task_plan"
+                    android:layout_width="0dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Plan The Next Day"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    Read View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_read"
+            android:layout_width="342dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#00796B"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_read"
+                    android:layout_width="137dp"
+                    android:layout_height="78dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_read"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/task_read"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Read"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    Exercise View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_exercise"
+            android:layout_width="342dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#303F9F"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_exercise"
+                    android:layout_width="137dp"
+                    android:layout_height="78dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_exercise"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/exercise_task"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/task_exercise"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Evening Exercise"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    Listen View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_listen"
+            android:layout_width="342dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#FFA000"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_listen"
+                    android:layout_width="137dp"
+                    android:layout_height="78dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_listen"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/task_listen"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Listen to Music"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    Meditate View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_meditate"
+            android:layout_width="342dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#689F38"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_meditate"
+                    android:layout_width="137dp"
+                    android:layout_height="78dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_meditate"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/task_meditate"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Meditate"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--  Reflect the day View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_reflect"
+            android:layout_width="342dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#C2185B"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_reflect"
+                    android:layout_width="137dp"
+                    android:layout_height="78dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_reflect"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/task_reflect"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Reflect The Day"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    Drink Water View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_drink_water"
+            android:layout_width="342dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#0288D1"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_drink_water"
+                    android:layout_width="137dp"
+                    android:layout_height="78dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_drink_water"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/task_drink_water"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Drink Water"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    Go for Walk View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_walk"
+            android:layout_width="342dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#512DA8"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_walk"
+                    android:layout_width="137dp"
+                    android:layout_height="78dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_walk"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/task_walk"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Go for Walk"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!--    Family time View-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_family_time"
+            android:layout_width="342dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:stateListAnimator="@anim/card_view_animation"
+            app:cardBackgroundColor="#E64A19"
+            card_view:cardCornerRadius="15dp"
+            card_view:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/image_family_time"
+                    android:layout_width="137dp"
+                    android:layout_height="78dp"
+                    android:cropToPadding="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/image_family"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/task_family_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="Family Time"
+                    android:textColor="@color/DailyWhite"
+                    android:textSize="27sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

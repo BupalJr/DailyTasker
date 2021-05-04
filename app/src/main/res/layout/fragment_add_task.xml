@@ -6,56 +6,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/DailyBlack"
-    tools:context=".ChooseMainTasks">
+    tools:context=".fragments.add.AddTaskFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/main_screen_topAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
-        app:liftOnScroll="true"
-        tools:ignore="MissingConstraints">
+    <!--<com.google.android.material.appbar.AppBarLayout-->
+    <!--    android:id="@+id/main_screen_topAppBar"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"-->
+    <!--    app:liftOnScroll="true"-->
+    <!--    tools:ignore="MissingConstraints">-->
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="horizontal">-->
 
-            <ImageView
-                android:id="@+id/back_arrow"
-                android:layout_width="51dp"
-                android:layout_height="54dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginTop="24dp"
-                android:src="@drawable/ic_baseline_arrow_back" />
+    <!--        <ImageView-->
+    <!--            android:id="@+id/back_arrow"-->
+    <!--            android:layout_width="51dp"-->
+    <!--            android:layout_height="54dp"-->
+    <!--            android:layout_marginStart="24dp"-->
+    <!--            android:layout_marginLeft="24dp"-->
+    <!--            android:layout_marginTop="24dp"-->
+    <!--            android:src="@drawable/ic_baseline_arrow_back" />-->
 
-            <TextView
-                android:id="@+id/add_task_title"
-                android:layout_width="250dp"
-                android:layout_height="31dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="36dp"
-                android:layout_marginEnd="281dp"
-                android:layout_marginRight="281dp"
-                android:fontFamily="sans-serif-medium"
-                android:letterSpacing="0.1"
-                android:text="Create a task"
-                android:textColor="@color/DailyYellow"
-                android:textSize="24sp" />
+    <!--        <TextView-->
+    <!--            android:id="@+id/add_task_title"-->
+    <!--            android:layout_width="250dp"-->
+    <!--            android:layout_height="31dp"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:layout_marginLeft="32dp"-->
+    <!--            android:layout_marginTop="36dp"-->
+    <!--            android:layout_marginEnd="281dp"-->
+    <!--            android:layout_marginRight="281dp"-->
+    <!--            android:fontFamily="sans-serif-medium"-->
+    <!--            android:letterSpacing="0.1"-->
+    <!--            android:text="Create a task"-->
+    <!--            android:textColor="@color/DailyYellow"-->
+    <!--            android:textSize="24sp" />-->
 
 
-        </LinearLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+    <!--    </LinearLayout>-->
+    <!--</com.google.android.material.appbar.AppBarLayout>-->
 
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="395dp"
+        android:layout_height="717dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
         android:paddingLeft="30dp"
-        android:paddingTop="60dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
 
@@ -63,7 +69,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView_add_task"
             android:layout_width="340dp"
-            android:layout_height="130dp"
+            android:layout_height="150dp"
             android:layout_marginTop="30dp"
             android:clickable="true"
             android:foreground="?attr/selectableItemBackground"
@@ -73,7 +79,7 @@
             card_view:cardElevation="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
@@ -93,37 +99,38 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
-                    android:id="@+id/input_one_time_task"
-                    android:layout_width="288dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginLeft="8dp"
+                    android:id="@+id/add_task_et"
+                    android:layout_width="313dp"
+                    android:layout_height="47dp"
                     android:background="@drawable/input_style"
                     android:ems="10"
                     android:hint="Add tasks here"
+                    android:inputType="text"
                     android:paddingLeft="20dp"
                     android:textColor="@color/DailyBlack"
-                    android:inputType="text"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/textView_one_time_task"
-                    app:layout_constraintHorizontal_bias="0.105"
-                    app:layout_constraintStart_toStartOf="@+id/textView_one_time_task"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView_one_time_task"
                     app:layout_constraintVertical_bias="0.0" />
 
                 <Button
-                    android:id="@+id/btn_save_task"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Save"
+                    android:id="@+id/add_task_btn"
+                    android:layout_width="88dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="244dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="add"
                     android:textColor="@color/DailyYellow"
                     android:textStyle="bold"
                     app:cornerRadius="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/input_one_time_task"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/input_one_time_task" />
+                    app:layout_constraintTop_toBottomOf="@+id/add_task_et" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -142,7 +149,6 @@
             android:text="Choose a task"
             android:textColor="@color/DailyYellow"
             android:textSize="24sp" />
-
 
         <!--    Morning Routine View-->
         <androidx.cardview.widget.CardView
@@ -290,6 +296,7 @@
 
 
         </androidx.cardview.widget.CardView>
+
     </LinearLayout>
 
 
