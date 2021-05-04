@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/DailyBlack"
-    tools:context=".MenuActivity">
+    tools:context=".fragments.menu.MenuFragment">
 
     <!--    Daily Tasker Logo -->
     <ImageView
@@ -35,101 +35,100 @@
         app:layout_constraintTop_toBottomOf="@+id/page_logo">
         <!--    MAIN BREAKS -->
         <!--    Break -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/DailyYellow" />
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:background="@color/DailyYellow" />-->
 
-        <!--        Home -->
-        <LinearLayout
-            android:id="@+id/click_home"
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal"
-            android:outlineAmbientShadowColor="@color/DailyWhite">
+<!--        &lt;!&ndash;        Home &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/click_home"-->
+<!--            android:layout_width="400dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:outlineAmbientShadowColor="@color/DailyWhite">-->
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_home" />
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_baseline_home" />-->
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_weight="2"
-                android:text="Home"
-                android:textColor="@color/DailyYellow"
-                android:textSize="15sp" />
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_weight="2"-->
+<!--                android:text="Home"-->
+<!--                android:textColor="@color/DailyYellow"-->
+<!--                android:textSize="15sp" />-->
 
-        </LinearLayout>
-        <!--    Break -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/DailyYellow" />
+<!--        </LinearLayout>-->
+<!--        &lt;!&ndash;    Break &ndash;&gt;-->
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:background="@color/DailyYellow" />-->
 
+<!--        &lt;!&ndash;     Done Tasks&ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/click_done_tasks"-->
+<!--            android:layout_width="400dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:orientation="horizontal">-->
 
-        <!--     Done Tasks-->
-        <LinearLayout
-            android:id="@+id/click_done_tasks"
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_baseline_done" />-->
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_done" />
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_weight="2"-->
+<!--                android:text="Completed Tasks"-->
+<!--                android:textColor="@color/DailyYellow"-->
+<!--                android:textSize="15sp" />-->
+<!--        </LinearLayout>-->
+<!--        &lt;!&ndash;    Break &ndash;&gt;-->
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:background="@color/DailyYellow" />-->
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_weight="2"
-                android:text="Completed Tasks"
-                android:textColor="@color/DailyYellow"
-                android:textSize="15sp" />
-        </LinearLayout>
-        <!--    Break -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="16dp"
-            android:background="@color/DailyYellow" />
+<!--        &lt;!&ndash;       Notifications &ndash;&gt;-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/click_notifications"-->
+<!--            android:layout_width="400dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:orientation="horizontal">-->
 
-        <!--       Notifications -->
-        <LinearLayout
-            android:id="@+id/click_notifications"
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/ic_baseline_notifications" />-->
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_notifications" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_weight="2"
-                android:text="Notifications"
-                android:textColor="@color/DailyYellow"
-                android:textSize="15sp" />
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_weight="2"-->
+<!--                android:text="Notifications"-->
+<!--                android:textColor="@color/DailyYellow"-->
+<!--                android:textSize="15sp" />-->
+<!--        </LinearLayout>-->
 
 
         <!--    MAIN BREAKS -->
@@ -312,6 +311,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="16dp"
             android:background="@color/DailyYellow" />
+
         <!--        RATE APP-->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView_rate_app"
@@ -331,10 +331,9 @@
                 android:id="@+id/textView_rate_app"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="100dp"
-                android:layout_marginLeft="100dp"
-                android:layout_marginTop="7dp"
+                android:paddingTop="5sp"
                 android:text="rate app"
+                android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/DailyBlack"
                 android:textSize="25sp"

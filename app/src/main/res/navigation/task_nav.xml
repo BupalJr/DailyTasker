@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/task_nav"
+    app:startDestination="@id/listTaskFragment">
+
+    <fragment
+        android:id="@+id/listTaskFragment"
+        android:name="bupaljr.com.dailytasker.fragments.list.ListTaskFragment"
+        android:label=""
+        tools:layout="@layout/fragment_list_task" >
+        <action
+            android:id="@+id/action_listTaskFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+        <action
+            android:id="@+id/action_listTaskFragment_to_updateTaskFragment"
+            app:destination="@id/updateTaskFragment" />
+        <action
+            android:id="@+id/action_listTaskFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="bupaljr.com.dailytasker.fragments.add.AddTaskFragment"
+        android:label="Add Tasks"
+        android:textColor="@color/DailyYellow"
+        tools:layout="@layout/fragment_add_task" >
+        <action
+            android:id="@+id/action_addTaskFragment_to_listTaskFragment"
+            app:destination="@id/listTaskFragment" />
+        <action
+            android:id="@+id/action_addTaskFragment_to_morningRoutineFragment"
+            app:destination="@id/morningRoutineFragment" />
+        <action
+            android:id="@+id/action_addTaskFragment_to_allDayRoutineFragment"
+            app:destination="@id/allDayRoutineFragment" />
+        <action
+            android:id="@+id/action_addTaskFragment_to_eveningRoutineFragment"
+            app:destination="@id/eveningRoutineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateTaskFragment"
+        android:name="bupaljr.com.dailytasker.fragments.update.UpdateTaskFragment"
+        android:label="Updating Tasks"
+        tools:layout="@layout/fragment_update_task" >
+        <action
+            android:id="@+id/action_updateTaskFragment_to_listTaskFragment"
+            app:destination="@id/listTaskFragment" />
+        <argument
+            android:name="currentTask"
+            app:argType="bupaljr.com.dailytasker.model.Task" />
+    </fragment>
+    <fragment
+        android:id="@+id/eveningRoutineFragment"
+        android:name="bupaljr.com.dailytasker.fragments.add.EveningRoutineFragment"
+        android:label="Evening Routine"
+        tools:layout="@layout/fragment_evening_routine" >
+        <action
+            android:id="@+id/action_eveningRoutineFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allDayRoutineFragment"
+        android:name="bupaljr.com.dailytasker.fragments.add.AllDayRoutineFragment"
+        android:label="All Day Routine"
+        tools:layout="@layout/fragment_all_day_routine" >
+        <action
+            android:id="@+id/action_allDayRoutineFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/morningRoutineFragment"
+        android:name="bupaljr.com.dailytasker.fragments.add.MorningRoutineFragment"
+        android:label="Morning Routine"
+
+        tools:layout="@layout/fragment_morning_routine" >
+        <action
+            android:id="@+id/action_morningRoutineFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="bupaljr.com.dailytasker.fragments.menu.MenuFragment"
+        android:label=""
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_listTaskFragment"
+            app:destination="@id/listTaskFragment" />
+    </fragment>
+</navigation>

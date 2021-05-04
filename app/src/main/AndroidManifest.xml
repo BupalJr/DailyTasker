@@ -14,7 +14,8 @@
         <activity android:name="bupaljr.com.dailytasker.EveningTasks" />
         <activity android:name="bupaljr.com.dailytasker.MorningTasks" />
         <activity android:name="bupaljr.com.dailytasker.ChooseMainTasks" />
-        <activity android:name="bupaljr.com.dailytasker.SplashScreen">
+        <activity android:name="bupaljr.com.dailytasker.SplashScreen"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
